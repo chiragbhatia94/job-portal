@@ -1,23 +1,42 @@
-# Open source Template
+# Job Portal POC
 
-This is a template for a open source GitHub repo.
-It can be used to jump start with creating your new open source project.
+A job portal POC in spring & react
+
+# Problem Statement
+  - Build a web portal to collect job requests, provision supply candidate information from 
+    different sources and provision to update the status against each request and get holistic
+    view of requests progress. Possibly, bring out any analytics in dashboard like demand
+    fulfillment ratio, supply ratio. Make your own assumptions on different users, required
+    simple inputs, workflows and capabilities.
+
+  - Technologies &amp; Assumptions
+    - Use GitHub for the code commits and share the link
+    - React for UI, Redux Store, etc.,
+    - Kotlin/Java + Spring Boot + Unit Testing Frameworks for Backend
+    - Possibly deploy on any cloud space for trial run
+    - Put guide doc or readme file
+    - Don’t need to have a database for capturing inputs, possibility of JSON file as database
+    - Have simple inputs, do not go in to very detailed inputs.
+
+  - Recommended Outputs:
+    - Identify Test cases in a excel sheet
+    - Write Test cases and Test suite for the functionalities you develop.
+    - Flow diagram or High-Level architecture view currently you built and how can it be taken
+      to next levels
+    - Working prototype
 
 **Disclaimer**
 This repository is a work in progress as of writing this README.
-<!-- Remove this disclaimer when you are done with your changes ;) -->
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for setting up your next big open source project. Just update the helpful TODOs & FIXMEs & you should be ready.
 
 ### Prerequisites
-<!-- What things you need to install the software and how to install them -->
 Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) & create an account in [GitHub](https://github.com) or any git based VCS system you like.
+Install Java (1.8)
 
 ### Installing
-
-<!-- A step by step series of examples that tell you how to get a development env running -->
 
 #### Option 1
 
