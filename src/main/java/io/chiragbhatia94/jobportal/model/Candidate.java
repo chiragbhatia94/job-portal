@@ -11,6 +11,8 @@ public class Candidate {
     @GeneratedValue
     Long id;
     private String name;
+    private String email;
+    private Float gpa;
 
     public Candidate() {
     }
@@ -31,18 +33,36 @@ public class Candidate {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Float getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(Float gpa) {
+        this.gpa = gpa;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Candidate candidate = (Candidate) o;
         return Objects.equals(id, candidate.id) &&
-                Objects.equals(name, candidate.name);
+                Objects.equals(name, candidate.name) &&
+                Objects.equals(email, candidate.email) &&
+                Objects.equals(gpa, candidate.gpa);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, name, email, gpa);
     }
 
     @Override
@@ -50,6 +70,8 @@ public class Candidate {
         return "Candidate{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", gpa=" + gpa +
                 '}';
     }
 }
