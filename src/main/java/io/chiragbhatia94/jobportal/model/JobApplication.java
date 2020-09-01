@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"candidate_id", "job_id"})})
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "job_id"})})
 @Data
 public class JobApplication {
     private @Id
@@ -16,8 +16,8 @@ public class JobApplication {
     Long id;
 
     @ManyToOne
-    @JoinColumn(name = "candidate_id")
-    private Candidate candidate;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "job_id")
