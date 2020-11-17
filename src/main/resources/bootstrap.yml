@@ -1,0 +1,83 @@
+spring:
+  profiles:
+    active: default, console-logging, local
+  application:
+    name: paccar-warranty
+  jmx:
+    enabled: true
+    default-domain: paccar-warranty
+  main:
+    banner-mode: OFF
+
+  cloud:
+    bus:
+      enabled: false
+    discovery:
+      enabled: false
+    consul:
+      enabled: false
+      config:
+        enabled: false
+        format: yaml
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '-'
+      discovery:
+        enabled: false
+        healthCheckPath: ${management.contextPath}
+        healthCheckInterval: 15s
+        instanceId: ${spring.application.name}:${random.value}
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:8500}
+
+logging:
+  level:
+    ROOT: INFO
+    org.hibernate: WARN
+    org.springframework: WARN
+
+management:
+  endpoints:
+    web:
+      # exposure:
+      # include: health
+      # exclude: "*"
+      base-path: /manage
+  endpoint:
+    health:
+      show-details: never
+
+---
+
+spring:
+  profiles: console-logging
+
+logging:
+  config: classpath:logback-console.xml
+
+---
+
+server:
+  servlet:
+    context-path: /paccar-warranty-local
+spring:
+  profiles: local
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+
+---
+
+server:
+  servlet:
+    context-path: /paccar-warranty-dev
+spring:
+  profiles: dev
+  cloud:
+    consul:
+      host: consul.service.dev.registry.cdk.com
+      port: 80
+
+---
