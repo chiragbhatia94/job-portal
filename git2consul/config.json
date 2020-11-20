@@ -4,6 +4,7 @@
     "name" : "job-portal",
     "url" : "https://github.com/chiragbhatia94/job-portal.git",
     "include_branch_name":false,
+    "ignore_file_extension" : true,
     "source_root":"consul-config/pdx/dit",
     "mountpoint":"global/chiragbhatia94",
     "branches" : ["develop"],

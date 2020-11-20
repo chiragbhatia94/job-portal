@@ -12,10 +12,9 @@ spring:
     consul:
       config:
         enabled: true
-        prefix: global/ps-truck
+        prefix: global/chiragbhatia94
         defaultContext: apps
         profileSeparator: '-'
-        format: files
       discovery:
         healthCheckPath: /health
         healthCheckInterval: 15s
