@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  job-portal:
+    build: .
+    environment:
+      profiles: default,console-logging,docker
+      TEST: "false"
+    logging:
+      driver: splunk
+      options:
+        splunk-format: "json"
+        splunk-insecureskipverify: "true"
+        splunk-source: "job-portal"
+        splunk-token: "admin11"
+        splunk-url: "https://localhost:8088"
+        tag: "{{.ImageName}}/{{.Name}}/{{.ID}}"
+  #        splunk-verify-connection: "false"
