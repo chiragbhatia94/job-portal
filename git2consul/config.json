@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "repos" : [{
+    "name" : "job-portal",
+    "url" : "https://github.com/chiragbhatia94/job-portal.git",
+    "include_branch_name":false,
+    "source_root":"consul-config/pdx/dit",
+    "mountpoint":"global/chiragbhatia94",
+    "branches" : ["develop"],
+    "hooks": [{
+      "type" : "polling",
+      "interval" : "1"
+    }]
+  }]
+}
