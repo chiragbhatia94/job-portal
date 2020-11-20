@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @RefreshScope
 @Configuration
-@ConfigurationProperties("meta")
+@ConfigurationProperties()
 @Getter
 @Setter
 public class MetaProperties {
